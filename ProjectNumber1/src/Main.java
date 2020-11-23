@@ -66,7 +66,7 @@ public class Main {
         The tests will put your method through several different Strings to test
         all possible cases.  If you have 100% success then there is no bugs in your methods.
          */
-        String s = "abcdefghijklmnopqrstuvwxyz";
+        String s = "azcbobobegghakl";
         problemOne(s);
         problemTwo(s);
         problemThree(s);
