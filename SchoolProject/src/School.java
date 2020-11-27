@@ -1,29 +1,29 @@
 import java.util.ArrayList;
 
+/**
+ * School class used in SchoolProject to hold three ArrayLists, one each for teachers, students, and courses.
+ */
+
 public class School {
-    ArrayList<Student>students = new ArrayList<>();
+    // Create the ArrayLists as per the instructions
     ArrayList<Teacher>teachers = new ArrayList<>();
-    ArrayList<Course>courses = new ArrayList<>();
+    ArrayList<Student>students = new ArrayList<>();
+    // TODO: Figure out why the ArrayList "courses" is here and never used?
+    ArrayList<String>courses = new ArrayList<>();
 
-    String name = "Gladstone Secondary School";
-    String address = "4105 Gladstone St, Vancouver, BC V5N 4Z2";
-    Integer capacity = 1200;
+    // Create out 3 additional fields, private of course
+    private String name;
+    private String address;
+    private Integer capacity;
 
-    // Fields and methods related to students
-    public ArrayList<Student> getStudents() {
-        return students;
+    // Create the parameterized constructor
+    public School(String name, String address, Integer capacity) {
+        this.name = name;
+        this.address = address;
+        this.capacity = capacity;
     }
 
-    public void addStudent(Student student) {
-        this.students.add(student);
-    }
-
-    public void deleteStudent(Student student) {
-        this.students.remove(student);
-    }
-
-
-    // Fields and methods related to teachers
+    // Methods related to teachers
     public ArrayList<Teacher> getTeachers() {
         return teachers;
     }
@@ -37,21 +37,21 @@ public class School {
     }
 
 
-    // Fields and methods related to courses
-    public ArrayList<Course> getCourses() {
-        return courses;
+    // Methods related to students
+    public ArrayList<Student> getStudents() {
+        return students;
     }
 
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
+    public void addStudent(Student student) {
+        this.students.add(student);
     }
 
-    public void deleteCourse(Course course) {
-        this.courses.remove(course);
+    public void deleteStudent(Student student) {
+        this.students.remove(student);
     }
 
 
-    // Get and set methods for the three additional fields: name, address, and capacity
+    // Getter and setter methods for the three additional fields: name, address, and capacity
     public String getName() {
         return name;
     }
@@ -64,9 +64,7 @@ public class School {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    public void setAddress(String address) { this.address = address; }
 
     public Integer getCapacity() {
         return capacity;
